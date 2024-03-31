@@ -85,6 +85,10 @@
     margin: 42px 19px 0 19px;
   }
 
+  .profile__image {
+    margin: 0;
+  }
+
   .profile__info {
     display: flex;
     flex-wrap: wrap;

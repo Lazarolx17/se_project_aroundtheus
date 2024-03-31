@@ -18,8 +18,13 @@
     padding: 0 19px;
     margin-top: 36px;
   }
+}
 
+@media screen and (max-width: 320px) {
   .cards__list {
-    padding: 0 19px;
+    grid-template-columns: repeat(auto-fit, 282px);
+    justify-content: flex-start;
+    grid-gap: 20px 0;
+    padding: 0;
   }
 }
