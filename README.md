@@ -1,21 +1,13 @@
 # Project 3: Around The U.S.
 
-### Overview  
+## Description
 
-* Intro  
-* Figma  
-* Images  
-  
-**Intro**
-  
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
-  
-**Figma**  
-  
-* [Link to the project on Figma](https://www.figma.com/file/ii4xxsJ0ghevUOcssTlHZv/Sprint-3%3A-Around-the-US?node-id=0%3A1)  
-  
-**Images**  
-  
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
-  
-Good luck and have fun!
+This project is made so all the elements are displayed correctly on popular screen sizes. This project tackles this challenge by implementing responsive design principles, ensuring that the layout, content, and functionality of the website remain consistent and accessible across various devices, including desktops, laptops, tablets, and smartphones.
+
+### Overview
+
+Github repo Link: Github repo here once project is done
+
+Video Demo Link: Once project is corrected video explanation link goes here.
+
+Project overview Link: add link here once project is done and corrected.
