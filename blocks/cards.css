@@ -22,7 +22,6 @@
 
 @media screen and (max-width: 320px) {
   .cards__list {
-    grid-template-columns: repeat(auto-fit, 282px);
     justify-content: flex-start;
     grid-gap: 20px 0;
     padding: 0;
