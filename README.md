@@ -6,8 +6,8 @@ This project is made so all the elements are displayed correctly on popular scre
 
 ### Overview
 
-Github repo Link: Github repo here once project is done
+Github repo Link: https://github.com/Lazarolx17/se_project_aroundtheus
 
-Video Demo Link: Once project is corrected video explanation link goes here.
+Video Demo Link: https://drive.google.com/file/d/1mo8dbotxU8pv3seXJZoA3D9Qk5Lz9886/view
 
-Project overview Link: add link here once project is done and corrected.
+Project overview Link: https://lazarolx17.github.io/se_project_aroundtheus/
