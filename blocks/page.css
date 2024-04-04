@@ -11,12 +11,12 @@
   margin: 0 auto;
   box-sizing: border-box;
   justify-content: center;
-  /* padding: 0 20px; */
 }
 
 .page__content {
   display: flex;
   flex-direction: column;
+  align-items: center;
   min-height: 100vh;
   margin: 0;
   padding: 0 20px;
@@ -38,6 +38,24 @@
   .page__section {
     margin: 0;
     padding: 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .page__section {
+    padding: 0 10px;
+  }
+
+  .profile {
+    margin-top: 0;
+  }
+
+  .profile__info {
+    width: 100%;
+  }
+
+  .cards {
+    margin-top: 20px;
   }
 }
 
