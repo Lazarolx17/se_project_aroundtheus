@@ -4,26 +4,10 @@
 
 .cards__list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 282px);
   justify-content: center;
-  list-style-type: none;
-  margin: 0;
-  width: 100%;
+  grid-template-columns: repeat(auto-fit, 282px);
   grid-gap: 20px 17px;
-  padding-left: 0;
-}
-
-@media screen and (max-width: 768px) {
-  .cards {
-    padding: 0 19px;
-    margin-top: 36px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .cards__list {
-    justify-content: flex-start;
-    grid-gap: 20px 0;
-    padding: 0;
-  }
+  padding: 0;
+  margin: 36px 0 0;
+  list-style-type: none;
 }

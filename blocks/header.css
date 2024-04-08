@@ -1,25 +1,21 @@
 .header {
-  margin: 45px auto 20px;
-  padding-bottom: 41px;
+  margin-top: 45px;
+  margin-bottom: 40px;
   border-bottom: 1px solid rgba(84, 84, 84, 0.7);
-  width: 100vw;
-  max-width: calc(100% - 40px);
+  box-sizing: border-box;
+}
+.header__logo {
+  margin-bottom: 41px;
 }
 
-@media screen and (max-width: 768px) {
-  .header {
-    padding-left: 27px;
-    margin: 28px auto 20px;
-  }
-}
-
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 620px) {
   .header {
     margin-top: 28px;
-    padding-bottom: 32px;
+    margin-bottom: 0;
   }
-
   .header__logo {
+    margin-left: 27px;
+    margin-bottom: 32px;
     width: 126px;
     height: 24px;
   }
