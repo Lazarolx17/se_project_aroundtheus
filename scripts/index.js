@@ -26,18 +26,58 @@ const initialCards = [
 ];
 
 // ELEMENTS
-
 const profileEditButton = document.querySelector("#profile-edit-button");
 const profileEditModal = document.querySelector("#profile-edit-modal");
 const profileEditCloseButton = document.querySelector(
   "#profile-edit-close-button"
 );
+const profileTitle = document.querySelector(".profile__title");
+const profileDescription = document.querySelector(".profile__description");
+const profileTitleInput = document.querySelector("#profile-title-input");
+const profileDescriptionInput = document.querySelector(
+  "#profile-description-input"
+);
+const profileEditForm = profileEditModal.querySelector(".modal__form");
+const cardListEl = document.querySelector(".cards__list");
+const cardTemplate =
+  document.querySelector("#card-template").content.firstElementChild;
+
+//FUNCTIONS
+function closePopup() {
+  profileEditModal.classList.remove("modal__opened");
+}
+
+function getCardElement(data) {
+  const cardElement = cardTemplate.cloneNode(true);
+  const cardImageEl = cardElement.querySelector(".card__image");
+  const cardTitleEl = cardElement.querySelector(".card__title");
+
+  cardTitleEl.textContent = data.name;
+  cardImageEl.src = data.link;
+  cardImageEl.alt = data.name;
+  return cardElement;
+}
+
+//EVENT HANDLERS
+function handleProfileEditFormSubmit(e) {
+  e.preventDefault();
+  profileTitle.textContent = profileTitleInput.value;
+  profileDescription.textContent = profileDescriptionInput.value;
+  closePopup();
+}
 
 // EVENT LISTENERS
 profileEditButton.addEventListener("click", () => {
+  profileTitleInput.value = profileTitle.textContent;
+  profileDescriptionInput.value = profileDescription.textContent;
+
   profileEditModal.classList.add("modal__opened");
 });
 
-profileEditCloseButton.addEventListener("click", () => {
-  profileEditModal.classList.remove("modal__opened");
+profileEditCloseButton.addEventListener("click", closePopup);
+profileEditForm.addEventListener("submit", handleProfileEditFormSubmit);
+
+initialCards.forEach((data) => {
+  const cardElement = getCardElement(data);
+  cardListEl.prepend(cardElement);
 });
