@@ -12,6 +12,10 @@
   object-fit: cover;
 }
 
+.card__image:hover {
+  cursor: pointer;
+}
+
 .card__title {
   font-size: 24px;
   font-weight: 900;
@@ -46,4 +50,37 @@
 .card__like-button:hover {
   opacity: 50%;
   cursor: pointer;
+}
+
+.card__delete-button {
+  background: transparent url(../images/Trash.svg);
+  width: 18px;
+  height: 19px;
+  border: none;
+  position: absolute;
+  top: 18px;
+  left: 249px;
+}
+
+.card__delete-button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.card__like-button_active {
+  background-image: url(../images/dark-like.svg);
+}
+
+.card__like-button:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 620px) {
+  .card {
+    margin-bottom: 20px;
+  }
+  .card:last-child {
+    margin-bottom: 0;
+  }
 }

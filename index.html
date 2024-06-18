@@ -32,7 +32,7 @@
               type="button"
               class="profile__edit-button"
               id="profile-edit-button"
-              aria-label="Edi button"
+              aria-label="Edit button"
             ></button>
             <p class="profile__description">Explorer</p>
           </div>
@@ -143,15 +143,16 @@
       </footer>
     </div>
 
+    <!-- Edit modal -->
     <div class="modal" id="profile-edit-modal">
-      <div class="modal__container">
+      <div class="modal__container" id="modal-container">
         <button
           class="modal__close"
           id="profile-edit-close-button"
           type="button"
         ></button>
         <h3 class="modal__heading">Edit profile</h3>
-        <form class="modal__form">
+        <form class="modal__form" id="edit-profile-form">
           <input
             class="modal__form-input"
             type="text"
@@ -173,9 +174,41 @@
       </div>
     </div>
 
+    <!-- Add card modal -->
+    <div class="modal" id="profile-add-modal">
+      <div class="modal__container" id="modal-container">
+        <button
+          class="modal__close"
+          id="add-profile-edit-close-button"
+          type="button"
+        ></button>
+        <h3 class="modal__heading">New Place</h3>
+        <form class="modal__form" id="add-card-form">
+          <input
+            class="modal__form-input modal_input_type_title"
+            type="text"
+            placeholder="Title"
+            name="title"
+            id="card-title-input"
+            required
+          />
+          <input
+            class="modal__form-input card_type_image-link"
+            type="text"
+            placeholder="Image link"
+            name="Image link"
+            id="card-link-input"
+            required
+          />
+          <button class="modal__button" type="submit">Save</button>
+        </form>
+      </div>
+    </div>
+
     <template id="card-template">
       <li class="card">
         <img src="" alt="" class="card__image" />
+        <button class="card__delete-button" id="delete" type="button"></button>
         <div class="card__description">
           <h2 class="card__title"></h2>
           <button
@@ -186,7 +219,17 @@
         </div>
       </li>
     </template>
-
+    <div class="modal" id="modal__image-preview">
+      <button
+        class="modal__close"
+        type="button"
+        id="modal__close-preview"
+      ></button>
+      <form class="modal__form" id="modal__preview-form">
+        <img src="" class="preview__image" alt="" />
+        <h3 class="modal__preview-title"></h3>
+      </form>
+    </div>
     <script src="./scripts/index.js" defer></script>
   </body>
 </html>

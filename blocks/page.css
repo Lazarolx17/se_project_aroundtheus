@@ -24,3 +24,10 @@
     padding: 0;
   }
 }
+
+@media screen and (max-width: 620x) {
+  .page {
+    justify-content: center;
+    flex-direction: column;
+  }
+}
