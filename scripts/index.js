@@ -48,7 +48,7 @@ const addNewCardCloseButton = document.querySelector(
   "#add-profile-edit-close-button"
 );
 const cardTitleInput = document.querySelector(".modal__input_type_title");
-const cardLinkInput = document.querySelector("#profile__input-type-URL");
+const cardLinkInput = document.querySelector("#card-link-input");
 const previewImageModal = document.querySelector("#modal__image-preview");
 const previewImageClose = document.querySelector("#modal__close-preview");
 const previewImageTitle = document.querySelector(".modal__preview-title");
@@ -111,17 +111,36 @@ function handleAddCardFormSubmit(evt) {
   evt.preventDefault();
   const name = cardTitleInput.value;
   const link = cardLinkInput.value;
+
   renderCardElement({ name, link }, cardListEl);
+
   addNewCardForm.reset();
   closePopup(addNewCardModal);
 }
 
 // EVENT LISTENERS
-profileEditButton.addEventListener("click", () => {
+// profileEditButton.addEventListener("click", () => {
+//   profileTitleInput.value = profileTitle.textContent;
+//   profileDescriptionInput.value = profileDescription.textContent;
+//   openPopup(profileEditModal);
+// });
+
+// Refactored EVENT LISTENERS with separate functions
+
+// Function to fill profile form fields
+function fillProfileForm() {
   profileTitleInput.value = profileTitle.textContent;
   profileDescriptionInput.value = profileDescription.textContent;
+}
+
+// Function to open edit profile modal and fill form
+function openEditProfileModal() {
+  fillProfileForm();
   openPopup(profileEditModal);
-});
+}
+
+// Event listeners using the refactored functions
+profileEditButton.addEventListener("click", openEditProfileModal);
 
 profileEditCloseButton.addEventListener("click", () => {
   closePopup(profileEditModal);
