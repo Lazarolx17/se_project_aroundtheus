@@ -1,18 +1,16 @@
 .modal {
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
   bottom: 0;
-  z-index: 999;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 0 19px;
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s 0.6s, opacity 0.6s linear;
+  display: flex;
+  justify-content: center;
+  transition: visibility 0s 0.6s, opacity 0.6s;
 }
 
 .modal_opened {
@@ -33,25 +31,24 @@
 }
 
 .modal__close {
-  position: absolute;
-  background-image: url(../images/Close-icon.svg);
-  border: none;
+  background-image: url(../images/Close.svg);
   background-color: transparent;
+  cursor: pointer;
+  top: -45px;
+  right: -45px;
+  border: none;
   width: 40px;
   height: 40px;
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
-  bottom: calc(100% + 5px);
-  left: calc(100% + 5px);
-  cursor: pointer;
 }
 
 .modal_closed {
   display: none;
 }
 
-#modal__close-preview {
+.modal__close-preview {
   background-image: url(../images/Close-icon.svg);
   background-color: transparent;
   cursor: pointer;
@@ -60,7 +57,6 @@
   border: none;
   width: 40px;
   height: 40px;
-  rotate: 45;
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
@@ -163,12 +159,13 @@
   line-height: 16.94px;
 }
 
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 620px) {
   .modal__close {
     width: 26px;
     height: 26px;
     left: calc(100% - 26px);
   }
+
   .modal__container {
     width: 282px;
     height: 322px;
@@ -204,7 +201,7 @@
     margin: 0;
     position: absolute;
   }
-  #modal__close-preview {
+  .modal__close-preview {
     height: 30px;
     width: 30px;
     top: 100px;

@@ -50,7 +50,7 @@ const addNewCardCloseButton = document.querySelector(
 const cardTitleInput = document.querySelector(".modal__input_type_title");
 const cardLinkInput = document.querySelector("#card-link-input");
 const previewImageModal = document.querySelector("#modal__image-preview");
-const previewImageClose = document.querySelector("#modal__close-preview");
+const previewImageClose = document.querySelector(".modal__close-preview");
 const previewImageTitle = document.querySelector(".modal__preview-title");
 const previewImagePic = document.querySelector(".preview__image");
 
