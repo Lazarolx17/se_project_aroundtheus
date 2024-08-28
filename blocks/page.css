@@ -1,33 +1,23 @@
 .page {
   background-color: black;
   color: white;
-  font-family: "Inter", Arial, sans-serif;
-}
-
-.page__section {
-  width: 100%;
-  position: relative;
-  margin: auto;
 }
 
 .page__content {
   display: flex;
   flex-direction: column;
-  max-width: 880px;
   min-height: 100vh;
-  margin: 0 auto;
-  padding: 0 20px;
+  margin-top: 45px;
 }
 
+.page__section {
+  max-width: 880px;
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+}
 @media screen and (max-width: 320px) {
   .page__content {
-    padding: 0;
-  }
-}
-
-@media screen and (max-width: 620x) {
-  .page {
-    justify-content: center;
-    flex-direction: column;
+    margin-top: 28px;
   }
 }
