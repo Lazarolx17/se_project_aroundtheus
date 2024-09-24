@@ -1,3 +1,6 @@
+import Card from "../components/Card.js";
+import Validator from "../components/FormValidator.js";
+
 const initialCards = [
   {
     name: "Yosemite Valley",
@@ -128,7 +131,7 @@ function getCardElement(data) {
 /* -------------------------------------------------------------------------- */
 /*                               event handlers                               */
 /* -------------------------------------------------------------------------- */
-function handleProlileEditSubmit(e) {
+function handleProfileEditSubmit(e) {
   e.preventDefault();
   profileTitle.textContent = profileTitleInput.value;
   profileDescription.textContent = profileDescriptionInput.value;
@@ -158,7 +161,7 @@ profileEditButton.addEventListener("click", () => {
   openModal(profileEditModal);
 });
 
-profileEditForm.addEventListener("submit", handleProlileEditSubmit);
+profileEditForm.addEventListener("submit", handleProfileEditSubmit);
 addCardFormEl.addEventListener("submit", handleAddCardSubmit);
 
 initialCards.forEach((item) => {
