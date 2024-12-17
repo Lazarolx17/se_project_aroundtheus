@@ -1,56 +1,63 @@
 export default class Card {
-  constructor(card, cardSelector, handleImageClick) {
+  constructor({ name, link }, cardSelector, handleCardImageClick) {
+    this._name = name;
+    this._link = link;
     this._cardSelector = cardSelector;
-    this._handleImageClick = handleImageClick;
-    this._name = card.name;
-    this._link = card.link;
+    this._handleCardImageClick = handleCardImageClick;
   }
 
   _setEventListeners() {
-    this._cardElement
-      .querySelector(".card__like-button")
-      .addEventListener("click", () => {
-        this._handleLikeButton();
-      });
+    //".card__like-button"
+    this._likeButton.addEventListener("click", () => {
+      this._handleLikeIcon();
+    });
 
+    //".card__delete-button"
     this._cardElement
       .querySelector(".card__delete-button")
       .addEventListener("click", () => {
-        this._handleDeleteButton();
+        this._handleDeleteCard();
       });
 
-    this._cardImage.addEventListener("click", () => {
-      this._handleImageClick(this);
+    //click the card's image to open the preview-image modal
+    this._cardImageEl.addEventListener("click", () => {
+      this._handleCardImageClick(this._name, this._link);
     });
   }
 
-  _handleLikeButton() {
-    this._cardElement
-      .querySelector(".card__like-button")
-      .classList.toggle("card__like-button_active");
-  }
-
-  _handleDeleteButton() {
+  _handleDeleteCard() {
     this._cardElement.remove();
-    this._cardSelector = null;
+    this._cardElement = null;
   }
 
-  getView() {
+  _handleLikeIcon() {
+    this._likeButton.classList.toggle("card__like-button_liked");
+  }
+
+  getCardElement() {
     this._cardElement = document
       .querySelector(this._cardSelector)
       .content.querySelector(".card")
       .cloneNode(true);
 
-    this._likeBtn = this._cardElement.querySelector(".card__like-button");
-    this._cardImage = this._cardElement.querySelector(".card__image");
-    this._cardHeader = this._cardElement.querySelector(".card__header");
+    //select the image element within cardElement
+    //seelect the title element withtin cardElement
 
-    this._cardImage.src = this._link;
-    this._cardImage.alt = this._name;
-    this._cardHeader.textContent = this._name;
+    //set the src of the image element to be the link of the card
+
+    //set the text content of the title element to be the name of the card
+
+    // set event listners
+
+    this._cardImageEl = this._cardElement.querySelector(".card__image");
+    this._cardTitleEl = this._cardElement.querySelector(".card__title");
+    this._cardImageEl.src = this._link;
+    this._cardImageEl.alt = this._name;
+    this._cardTitleEl.textContent = this._name;
+    this._likeButton = this._cardElement.querySelector(".card__like-button");
 
     this._setEventListeners();
-
     return this._cardElement;
+    //return the card
   }
 }
